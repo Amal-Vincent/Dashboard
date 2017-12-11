@@ -33,394 +33,447 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <style>
+  	/* Hidding the radiobuttons & checkboxes */
+  input[type="radio"], input[type="checkbox"] {
+      display: none;
+  }
+  /* Hidding the "check" status of inputs */
+  input[type="radio"] + label .fa-circle,
+  input[type="checkbox"] + label .fa-check  {
+  display: none;
+  }
+  /* Styling the "check" status */
+  input[type="radio"]:checked + label .fa-circle,
+  input[type="checkbox"]:checked + label .fa-check {
+  display: block;
+  color: DarkTurquoise;
+  }
+  /* Styling checkboxes */
+  input[type="checkbox"]:checked + label .fa-check {
+  position: relative;
+  left: .125em;
+  bottom: .125em;
+  }
+  /* Styling radiobuttons */
+  input[type="radio"]:checked + label .fa-circle-o {
+  display: none;
+  }
+  </style>
 </head>
 <body class="hold-transition skin-purple-light sidebar-mini">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>S</b>DB</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SWAPP</b></span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="index2.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>S</b>DB</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>SWAPP</b></span>
       </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- Messages: style can be found in dropdown.less-->
 
-          <!-- Notifications: style can be found in dropdown.less -->
-          <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 5 notifications</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> Notification 1
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Notification 2
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-red"></i> Notification 3
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> Notification 4
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> Notification 5
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/doctor.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Doctor SWAPP</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/doctor.jpg" class="img-circle" alt="User Image">
+            <!-- Notifications: style can be found in dropdown.less -->
+            <li class="dropdown notifications-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="label label-warning">10</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 5 notifications</li>
+                <li>
+                  <!-- inner menu: contains the actual data -->
+                  <ul class="menu">
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-users text-aqua"></i> Notification 1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-warning text-yellow"></i> Notification 2
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-users text-red"></i> Notification 3
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-shopping-cart text-green"></i> Notification 4
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-user text-red"></i> Notification 5
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer"><a href="#">View all</a></li>
+              </ul>
+            </li>
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="dist/img/doctor.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs">Doctor SWAPP</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="dist/img/doctor.jpg" class="img-circle" alt="User Image">
 
-                <p>
-                  Doctor SWAPP - Pediatrician
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row" align="center">
-                    <a href="#">Patients</a>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/doctor.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <h6>Doctor SWAPP</h6>
-        </div>
-      </div>
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-child"></i> <span>Patients</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle"></i> Patient 1</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Patient 2</a></li>
-          </ul>
-        </li>
-        <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
-		<li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign out</span></a></li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1 align="center">
-        Patient 1
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <!-- Patient information -->
-      <div class="box box-primary">
-      	<div class="box-header with-border"><h3 class="box-title">Patient Information</h3></div>
-      	<div class="box-body">
-      		<div class="row">
-        <div class="col-lg-3 col-xs-6">
-        	<img src="dist/img/patient.jpg" class="img-rounded" alt="Patient Image" width="150" height="100">
-          </div>
-          <div class="col-lg-3 col-xs-6"><br><br><strong>Name: </strong>Patient 1</div>
-           <div class="col-lg-3 col-xs-6"><br><br><strong>Sex: </strong>Female</div>
-           <div class="col-lg-3 col-xs-6"><br><br><strong>Age: </strong>7</div>
-          </div>
-        </div>
-        </div>
-      <!-- /.row -->
-      <!-- Main row -->
-
-      <!--date picker-->
-     <div class="box box-primary">
-            <div class="box-header">
-              <h3 class="box-title">Date picker</h3>
-            </div>
-            <div class="box-body">
-              <!-- /.form group -->
-
-              <!-- Date range -->
-              <div class="form-group">
-                <label>Date range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
+                  <p>
+                    Doctor SWAPP - Pediatrician
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row" align="center">
+                      <a href="#">Patients</a>
                   </div>
-                  <input class="form-control pull-right" name="daterange" value="01/01/2017 - 01/31/2017" type="text">
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="dist/img/doctor.jpg" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <h6>Doctor SWAPP</h6>
+          </div>
+        </div>
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="active treeview">
+            <a href="#">
+              <i class="fa fa-child"></i> <span>Patients</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <input type="radio" name="option" id="radio1" checked/>
+          <label for="radio1">
+              <span class="fa-stack">
+                  <i class="fa fa-circle-o fa-stack-1x"></i>
+                  <i class="fa fa-circle fa-stack-1x"></i>
+              </span>
+              Patient 1
+          </label><br />
+          <input type="radio" name="option" id="radio2" />
+          <label for="radio2">
+              <span class="fa-stack">
+                  <i class="fa fa-circle-o fa-stack-1x"></i>
+                  <i class="fa fa-circle fa-stack-1x"></i>
+              </span>
+              Patient 2
+          </label>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+  		<li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign out</span></a></li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
 
-                </div>
-                <!-- /.input group -->
-              </div>
-             </div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          Patient 1
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li class="active">Dashboard</li>
+        </ol>
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <!-- Patient information -->
+        <div class="box box-primary">
+        	<div class="box-header with-border"><h3 class="box-title">Patient Information</h3></div>
+        	<div class="box-body">
+        		<div class="row">
+          <div class="col-lg-3 col-xs-6">
+          	<img src="dist/img/patient.jpg" class="img-rounded" alt="Patient Image" width="150" height="100">
             </div>
+            <div class="col-lg-3 col-xs-6"><br><br><strong>Name: </strong>Patient 1</div>
+             <div class="col-lg-3 col-xs-6"><br><br><strong>Sex: </strong>Female</div>
+             <div class="col-lg-3 col-xs-6"><br><br><strong>Age: </strong>7</div>
+            </div>
+          </div>
+          </div>
+        <!-- /.row -->
+        <!-- Main row -->
 
-              <!-- /.prepare, asleep, awakening -->
-              <div class="row">
-              	<!--prepare-->
-              	<div class="col-md-4">
-              	<div class="box box-primary">
-              		<div class="box-header with-border">
-              			<h3 class="box-title" align="center">Prepare for bed</h3>
-              			</div>
-              			<div class="box-body">
-              				 <div class="info-box bg-red">
-        <span class="info-box-icon"><i class="fa fa-frown-o"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">Mood</span>
-          <span class="info-box-number">0/5</span>
-          <!-- The progress section is optional -->
-          <div class="progress">
-            <div class="progress-bar" style="width: 0%"></div>
-          </div>
-          <span class="progress-description">
-            Sad
-          </span>
-        </div><!-- /.info-box-content -->
-      </div><!-- /.info-box -->
-      <div class="callout callout-info"> <dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li></ul></dd></dl></div>
-              			</div>
-              		</div><!--prepare-->
-              		 <!--daytime activity-->
-              			<div class="box box-primary">
-             			<div class="box-header with-border" ><h3 class="box-title">Daytime Activity</h3></div>
+        <!--date picker-->
+       <div class="box box-primary">
+              <div class="box-header">
+                <h3 class="box-title">Date picker</h3>
+              </div>
+              <div class="box-body">
+                <!-- /.form group -->
 
-             		<div class="box-body">
-             			<h4>Swimming</h4>
-             			 <div class="info-box bg-green">
-        <span class="info-box-icon"><i class="fa fa-smile-o"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">Mood</span>
-          <span class="info-box-number">5/5</span>
-          <!-- The progress section is optional -->
-          <div class="progress">
-            <div class="progress-bar" style="width: 100%"></div>
-          </div>
-          <span class="progress-description">
-            Happy
-          </span>
-        </div><!-- /.info-box-content -->
-      </div><!-- /.info-box -->
-      <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li><li>Behaviour 3</li><li>Behaviour 4</li></ul></dd></dl></div>
-      <h4>Cycling</h4>
-             			 <div class="info-box bg-green">
-        <span class="info-box-icon"><i class="fa fa-smile-o"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">Mood</span>
-          <span class="info-box-number">5/5</span>
-          <!-- The progress section is optional -->
-          <div class="progress">
-            <div class="progress-bar" style="width: 100%"></div>
-          </div>
-          <span class="progress-description">
-            Happy
-          </span>
-        </div><!-- /.info-box-content -->
-      </div><!-- /.info-box -->
-      <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li><li>Behaviour 3</li></ul></dd></dl></div>
-             		</div>
-             		</div>
-              	</div>
+                <!-- Date range -->
+                <div class="form-group">
+                  <label>Date range:</label>
 
-<!--asleep-->
-              		<div class="col-md-4">
-              		<div class="box box-primary">
-              		<div class="box-header with-border">
-              			<h3 class="box-title" >Asleep</h3>
-              			</div>
-              			<!-- Apply any bg-* class to to the info-box to color it -->
-              			<div class="box-body">
-      <div class="info-box bg-green">
-        <span class="info-box-icon"><i class="fa fa-smile-o"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">Mood</span>
-          <span class="info-box-number">5/5</span>
-          <!-- The progress section is optional -->
-          <div class="progress">
-            <div class="progress-bar" style="width: 100%"></div>
-          </div>
-          <span class="progress-description">
-            Happy
-          </span>
-        </div><!-- /.info-box-content -->
-      </div><!-- /.info-box -->
-      <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li><li>Behaviour 3</li></ul></dd></dl></div>
-      <div class="col text-center"><input type="text" value="4" class="dial text-center"  data-min="1" data-max="5">
-      <div class="knob-label">Sleep quality</div>
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input class="form-control opensleft" name="daterange" value="01/01/2017 - 01/31/2017" type="text">
+
+                  </div>
+                  <!-- /.input group -->
+                </div>
+               </div>
+              </div>
+
+                <!-- /.prepare, asleep, awakening -->
+                <div class="row">
+                	<!--prepare-->
+                	<div class="col-md-4">
+                	<div class="box box-primary">
+                		<div class="box-header with-border">
+                			<h3 class="box-title" align="center">Prepare for bed</h3>
+                			</div>
+                			<div class="box-body">
+                				 <div class="info-box bg-red">
+          <span class="info-box-icon"><i class="fa fa-frown-o"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Mood</span>
+            <span class="info-box-number">0/5</span>
+            <!-- The progress section is optional -->
+            <div class="progress">
+              <div class="progress-bar" style="width: 0%"></div>
+            </div>
+            <span class="progress-description">
+              Sad
+            </span>
+          </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+        <div class="callout callout-info"> <dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li></ul></dd></dl></div>
+                			</div>
+                		</div><!--prepare-->
+                		 <!--daytime activity-->
+                			<div class="box box-primary">
+               			<div class="box-header with-border" ><h3 class="box-title">Daytime Activity</h3></div>
+
+               		<div class="box-body">
+               			<h4>Swimming</h4>
+               			 <div class="info-box bg-green">
+          <span class="info-box-icon"><i class="fa fa-smile-o"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Mood</span>
+            <span class="info-box-number">5/5</span>
+            <!-- The progress section is optional -->
+            <div class="progress">
+              <div class="progress-bar" style="width: 100%"></div>
+            </div>
+            <span class="progress-description">
+              Happy
+            </span>
+          </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+        <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li><li>Behaviour 3</li><li>Behaviour 4</li></ul></dd></dl></div>
+        <h4>Cycling</h4>
+               			 <div class="info-box bg-green">
+          <span class="info-box-icon"><i class="fa fa-smile-o"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Mood</span>
+            <span class="info-box-number">5/5</span>
+            <!-- The progress section is optional -->
+            <div class="progress">
+              <div class="progress-bar" style="width: 100%"></div>
+            </div>
+            <span class="progress-description">
+              Happy
+            </span>
+          </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+        <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li><li>Behaviour 3</li></ul></dd></dl></div>
+               		</div>
+               		</div>
+                	</div>
+
+  <!--asleep-->
+                		<div class="col-md-4">
+                		<div class="box box-primary">
+                		<div class="box-header with-border">
+                			<h3 class="box-title" >Asleep</h3>
+                			</div>
+                			<!-- Apply any bg-* class to to the info-box to color it -->
+                			<div class="box-body">
+        <div class="info-box bg-green">
+          <span class="info-box-icon"><i class="fa fa-smile-o"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Mood</span>
+            <span class="info-box-number">5/5</span>
+            <!-- The progress section is optional -->
+            <div class="progress">
+              <div class="progress-bar" style="width: 100%"></div>
+            </div>
+            <span class="progress-description">
+              Happy
+            </span>
+          </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+        <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li><li>Behaviour 3</li></ul></dd></dl></div>
+        <div class="col text-center"><input type="text" value="4" class="dial text-center"  data-min="1" data-max="5">
+        <div class="knob-label">Sleep quality</div>
+        </div>
+        <h4>Sleep score last 10 days</h4>
+        <div class="chart">
+        	<canvas id="myChart"></canvas>
+        </div>
+        </div>
+                		</div><!--asleep-->
+                		<!--sleep assessment-->
+                		<div class="box box-primary">
+                			<div class="box-header with-border">
+                				<h3 class="box-title">Sleep Wake Assessment</h3>
+                			</div>
+                			<div class="box-body">
+                				<dl class="dl-horizontal"><dt>Date of assessment</dt><dd>29 November 2017</dd></dl>
+                				<table class="table with-border">
+                					<tbody>
+                					<tr>
+                						<th>Metric</th>
+                						<th> Value</th>
+                						<th>&nbsp;</th>
+                					</tr>
+                					<tr>
+                						<td>DIMS(7-35)</td>
+                						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:0%"></div></td>
+                						<td><span class="badge bg-yellow pull-right">7</span></td>
+                						</tr>
+                						<tr>
+                						<td>SBD(3-15)</td>
+                						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:33%"></div></td>
+                						<td><span class="badge bg-yellow pull-right">7</span></td>
+                						</tr>
+                						<tr>
+                						<td>DA(3-15)</td>
+                						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:33%"></div></td>
+                						<td><span class="badge bg-yellow pull-right">7</span></td>
+                						</tr>
+                						<tr>
+                						<td>SWTD(7-35)</td>
+                						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:0%"></div></td>
+                						<td><span class="badge bg-yellow pull-right">7</span></td>
+                						</tr>
+                						<tr>
+                						<td>DOES(5-25)</td>
+                						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:10%"></div></td>
+                						<td><span class="badge bg-yellow pull-right">7</span></td>
+                						</tr>
+                						<tr>
+                						<td>SHY(2-10)</td>
+                						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:63%"></div></td>
+                						<td><span class="badge bg-yellow pull-right">7</span></td>
+                						</tr>
+                						<tr>
+                						<td><strong>TOTAL(26-130)</strong></td>
+                						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-red" style="width:15%"></div></td>
+                						<td><span class="badge bg-red pull-right">42</span></td>
+                						</tr>
+                	</tbody>
+                				</table>
+                			</div>
+                		</div>
+                		</div>
+
+               <!--awake-->
+               <div class="col-md-4">
+                		<div class="box box-primary">
+                		<div class="box-header with-border">
+                			<h3 class="box-title" align="center">Awakening</h3>
+                			</div>
+                			<div class="box-body">
+                				 <div class="info-box bg-yellow">
+          <span class="info-box-icon"><i class="fa fa-meh-o"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Mood</span>
+            <span class="info-box-number">2.5/5</span>
+            <!-- The progress section is optional -->
+            <div class="progress">
+              <div class="progress-bar" style="width: 50%"></div>
+            </div>
+            <span class="progress-description">
+              Neutral
+            </span>
+          </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+        <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li></ul></dd></dl></div>
+                			</div>
+                		</div>
+               </div><!--awake-->
+
+               <!--prepare,sleep,awake-->
+               <!--Medication-->
+               <div class="col-md-4">
+               	<div class="box box-primary">
+               		<div class="box-header with-border"><h3 class="box-title">Medications</h3></div>
+               		<div class="box-body">
+               			<h4 align="center">Medication 1</h4><strong>Start date: </strong>9 July 2017<br><strong>End date: </strong>3 September 2019
+               			<div class="callout callout-info"><dl><dt>Dosage</dt><dd> X mg</dd></dl></div>
+               			<div class="callout callout-danger"><dl><dt>Side effects</dt><dd><ul><li>Side effect 1</li><li>Side effect 2</li></ul></dd></dl></div>
+               		<h4 align="center">Medication 2</h4><strong>Start date: </strong>2 January 2017<br><strong>End date: </strong>3 February 2020
+               			<div class="callout callout-info"><dl><dt>Dosage</dt><dd> Y ml</dd></dl></div>
+               			<div class="callout callout-danger"><dl><dt>Side effects</dt><dd><ul><li>Side effect 1</li><li>Side effect 2</li></ul></dd></dl></div>
+               		</div>
+               	</div><!--medication-->
+               </div>
+               </div>
+               <div class="row">
+               </div>
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
       </div>
-      </div>
-              		</div><!--asleep-->
-              		<!--sleep assessment-->
-              		<div class="box box-primary">
-              			<div class="box-header with-border">
-              				<h3 class="box-title">Sleep Wake Assessment</h3>
-              			</div>
-              			<div class="box-body">
-              				<dl class="dl-horizontal"><dt>Date of assessment</dt><dd>29 November 2017</dd></dl>
-              				<table class="table with-border">
-              					<tbody>
-              					<tr>
-              						<th>Metric</th>
-              						<th> Value</th>
-              						<th>&nbsp;</th>
-              					</tr>
-              					<tr>
-              						<td>DIMS(7-35)</td>
-              						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:0%"></div></td>
-              						<td><span class="badge bg-yellow pull-right">7</span></td>
-              						</tr>
-              						<tr>
-              						<td>SBD(3-15)</td>
-              						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:33%"></div></td>
-              						<td><span class="badge bg-yellow pull-right">7</span></td>
-              						</tr>
-              						<tr>
-              						<td>DA(3-15)</td>
-              						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:33%"></div></td>
-              						<td><span class="badge bg-yellow pull-right">7</span></td>
-              						</tr>
-              						<tr>
-              						<td>SWTD(7-35)</td>
-              						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:0%"></div></td>
-              						<td><span class="badge bg-yellow pull-right">7</span></td>
-              						</tr>
-              						<tr>
-              						<td>DOES(5-25)</td>
-              						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:10%"></div></td>
-              						<td><span class="badge bg-yellow pull-right">7</span></td>
-              						</tr>
-              						<tr>
-              						<td>SHY(2-10)</td>
-              						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width:63%"></div></td>
-              						<td><span class="badge bg-yellow pull-right">7</span></td>
-              						</tr>
-              						<tr>
-              						<td><strong>TOTAL(26-130)</strong></td>
-              						<td><div class="progress progress-xs"><div class="progress-bar progress-bar-red" style="width:15%"></div></td>
-              						<td><span class="badge bg-red pull-right">42</span></td>
-              						</tr>
-              	</tbody>
-              				</table>
-              			</div>
-              		</div>
-              		</div>
-
-             <!--awake-->
-             <div class="col-md-4">
-              		<div class="box box-primary">
-              		<div class="box-header with-border">
-              			<h3 class="box-title" align="center">Awakening</h3>
-              			</div>
-              			<div class="box-body">
-              				 <div class="info-box bg-yellow">
-        <span class="info-box-icon"><i class="fa fa-meh-o"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">Mood</span>
-          <span class="info-box-number">2.5/5</span>
-          <!-- The progress section is optional -->
-          <div class="progress">
-            <div class="progress-bar" style="width: 50%"></div>
-          </div>
-          <span class="progress-description">
-            Neutral
-          </span>
-        </div><!-- /.info-box-content -->
-      </div><!-- /.info-box -->
-      <div class="callout callout-info"><dl><dt>Behaviour: </dt><dd><ul><li>Behaviour 1</li><li>Behaviour 2</li></ul></dd></dl></div>
-              			</div>
-              		</div>
-             </div><!--awake-->
-
-             <!--prepare,sleep,awake-->
-             <!--Medication-->
-             <div class="col-md-4">
-             	<div class="box box-primary">
-             		<div class="box-header with-border"><h3 class="box-title">Medications</h3></div>
-             		<div class="box-body">
-             			<h4 align="center">Medication 1</h4><strong>Start date: </strong>9 July 2017<br><strong>End date: </strong>3 September 2019
-             			<div class="callout callout-info"><dl><dt>Dosage</dt><dd> X mg</dd></dl></div>
-             			<div class="callout callout-danger"><dl><dt>Side effects</dt><dd><ul><li>Side effect 1</li><li>Side effect 2</li></ul></dd></dl></div>
-             		<h4 align="center">Medication 2</h4><strong>Start date: </strong>2 January 2017<br><strong>End date: </strong>3 February 2020
-             			<div class="callout callout-info"><dl><dt>Dosage</dt><dd> Y ml</dd></dl></div>
-             			<div class="callout callout-danger"><dl><dt>Side effects</dt><dd><ul><li>Side effect 1</li><li>Side effect 2</li></ul></dd></dl></div>
-             		</div>
-             	</div><!--medication-->
-             </div>
-             </div>
-             <div class="row">
-             </div>
-
-    </section>
-    <!-- /.content -->
+      <strong>Copyright &copy; 2017 Amal Vincent</strong> All rights
+      reserved.
+    </footer>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -445,9 +498,58 @@
     $(function() {
     $('input[name="daterange"]').daterangepicker();
 });
+$(function(){
+
+    //get the line chart canvas
+    var ctx = $("#myChart");
+    //x-axis
+    array = new Array();
+for (i = 1; i < 11; i++) {
+    array[i-1] = i;
+}
+
+    //line chart data
+    var data = {
+        labels: array,
+        datasets: [
+            {
+                label: "Sleep score",
+                data: [5,5,1,4,2,2,5,3,1,5],
+                borderColor: "lightblue",
+                fill: false,
+                lineTension: 0,
+            }
+        ]
+    };
+
+    //options
+    var options = {
+        responsive: true,
+        title: {
+            display: false,
+            position: "top",
+            text: "Line Graph",
+            fontSize: 18,
+            fontColor: "#111"
+        },
+        legend: {
+            display: false
+        },
+
+    };
+
+    //create Chart class object
+    var chart = new Chart(ctx, {
+        type: "line",
+        data: data,
+        options: options
+    });
+});
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--Chart.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 <!-- Sparkline -->
 <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jQuery Knob Chart -->
