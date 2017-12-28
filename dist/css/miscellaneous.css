@@ -1,0 +1,73 @@
+/* Hidding the radiobuttons & checkboxes */
+
+input[type="radio"], input[type="checkbox"] {
+  display: none;
+}
+
+/* Hidding the "check" status of inputs */
+
+input[type="radio"]+label .fa-circle, input[type="checkbox"]+label .fa-check {
+  display: none;
+}
+
+/* Styling the "check" status */
+
+input[type="radio"]:checked+label .fa-circle, input[type="checkbox"]:checked+label .fa-check {
+  display: block;
+  color: DarkTurquoise;
+}
+
+/* Styling checkboxes */
+
+input[type="checkbox"]:checked+label .fa-check {
+  position: relative;
+  left: .125em;
+  bottom: .125em;
+}
+
+/* Styling radiobuttons */
+
+input[type="radio"]:checked+label .fa-circle-o {
+  display: none;
+}
+
+.sleep-para {
+  position: relative;
+  display: inline-block;
+}
+
+.sleep-para .spark-label {
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -250px;
+}
+
+.sleep-para .spark-label::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: 42%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.sleep-para:hover .spark-label {
+  visibility: visible;
+}
+
+.dl-bio {
+  margin-left: -70%;
+}
